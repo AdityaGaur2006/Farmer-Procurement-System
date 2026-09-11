@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#176b45" />
+    <title>KisanSetu | Farmer procurement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-required">
+    <section class="login-page" aria-labelledby="login-title">
+      <div class="login-copy">
+        <a class="brand" href="#" aria-label="KisanSetu home"><span class="brand-mark">⌁</span><span>Kisan<span>Setu</span></span></a>
+        <div class="login-message"><span class="eyebrow light">PROCUREMENT, MADE PREDICTABLE</span><h1>Better markets.<br><em>Better harvests.</em></h1><p>Book your visit, track your crop, and find the centre where your produce can earn more.</p></div>
+        <div class="login-stat"><strong>24%</strong><span>less crowding<br>with smart slots</span></div>
+        <div class="field-lines">⌁ &nbsp;⌁ &nbsp;⌁ &nbsp;⌁</div>
+      </div>
+      <div class="login-panel">
+        <form id="loginForm">
+          <span class="eyebrow">FARMER PORTAL</span><h2 id="login-title">Welcome back</h2><p>Sign in to manage your procurement.</p>
+          <label>Mobile number<input id="phone" name="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" value="9876543210" required /></label>
+          <label>Password<input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" value="kisan@123" required /></label>
+          <p class="login-error" id="loginError" role="alert"></p>
+          <button class="login-submit" type="submit">Sign in <span>→</span></button>
+          <div class="login-divider"><span>or</span></div>
+          <button class="otp-button" type="button" id="otpLogin">Sign in with OTP</button>
+          <p class="new-farmer">New to KisanSetu? <button type="button" id="registerFarmer">Create farmer account</button></p>
+          <p class="demo-hint">Demo login is prefilled for the prototype.</p>
+        </form>
+      </div>
+    </section>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard" aria-label="KisanSetu home">
+          <span class="brand-mark">⌁</span><span>Kisan<span>Setu</span></span>
+        </a>
+        <nav class="main-nav">
+          <a class="nav-link active" href="index.html"><i>⌂</i>Dashboard</a>
+          <a class="nav-link" href="bookings.html"><i>▣</i>My bookings</a>
+          <a class="nav-link" href="procurement.html"><i>◈</i>Procurement</a>
+          <a class="nav-link" href="payments.html"><i>₹</i>Payments</a>
+          <a class="nav-link" href="support.html"><i>?</i>Help & support</a>
+        </nav>
+        <section class="centre-card">
+          <span class="pulse"></span>
+          <p>Procurement centre</p>
+          <strong>Mandi No. 04</strong>
+          <small>Open today · 8 AM – 6 PM</small>
+        </section>
+        <div class="sidebar-bottom">
+          <a class="nav-link" href="#settings"><i>⚙</i>Settings</a>
+          <div class="profile"><span>AM</span><div><strong>Arjun Meena</strong><small>Farmer ID · FR-24081</small></div><button aria-label="Profile menu">⋮</button></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">⌁</span> KisanSetu</div>
+          <div class="greeting"><p>Wednesday, 10 September</p><h1>Good morning, Arjun <span>✦</span></h1></div>
+          <div class="top-actions"><button class="language">अ <span>English</span>⌄</button><button class="notification" aria-label="Notifications">♢<b></b></button><button class="menu-button" aria-label="Open menu">☰</button></div>
+        </header>
+
+        <div class="content" id="dashboard">
+          <section class="hero-grid">
+            <article class="booking-card">
+              <div class="card-heading"><div><span class="eyebrow light">NEXT PROCUREMENT</span><h2>Your slot is confirmed</h2></div><span class="confirmed">● Confirmed</span></div>
+              <div class="booking-info"><div class="date-tile"><strong>12</strong><span>SEP</span></div><div><h3>Friday, 10:30 – 11:00 AM</h3><p>Wheat · 45 quintals (estimated)</p><p class="location">⌖ Mandi No. 04, Bassi Road, Jaipur</p></div></div>
+              <div class="booking-footer"><div><span>Token number</span><strong>#A-042</strong></div><div><span>Expected wait</span><strong>18–24 mins</strong></div><button class="outline-light" id="viewBooking">View booking <span>→</span></button></div>
+              <div class="grain-pattern">✦ ✦ ✦ ✦</div>
+            </article>
+            <article class="queue-card">
+              <div class="queue-head"><div><span class="eyebrow">LIVE QUEUE</span><h2>Today at your centre</h2></div><button class="icon-button" id="refreshQueue" title="Refresh queue">↻</button></div>
+              <div class="queue-main"><div class="queue-number"><strong id="queueCount">28</strong><span>farmers<br>in queue</span></div><div class="queue-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="41"/><circle class="ring-value" cx="50" cy="50" r="41"/></svg><b>62%</b><small>capacity</small></div></div>
+              <div class="queue-note"><span>✦</span><p><strong>Queue moving normally</strong><br>Average processing time: 12 mins</p></div>
+            </article>
+          </section>
+
+          <section class="section-header"><div><span class="eyebrow">QUICK ACTIONS</span><h2>What would you like to do?</h2></div><button class="secondary-link" id="viewAllActions">View all <span>→</span></button></section>
+          <section class="actions-grid" id="bookings">
+            <button class="action-card primary-action" id="bookSlot"><span class="action-icon">＋</span><span><strong>Book a new slot</strong><small>Choose a convenient time</small></span><em>→</em></button>
+            <button class="action-card" id="checkQueue"><span class="action-icon amber">⌁</span><span><strong>Check queue status</strong><small>Real-time centre updates</small></span><em>→</em></button>
+            <button class="action-card" id="trackProcurement"><span class="action-icon blue">◈</span><span><strong>Track procurement</strong><small>Lots, quality & receipts</small></span><em>→</em></button>
+            <button class="action-card" id="viewPayments"><span class="action-icon purple">₹</span><span><strong>View payments</strong><small>Settlement status & history</small></span><em>→</em></button>
+          </section>
+
+          <section class="lower-grid">
+            <article class="activity-card" id="procurement"><div class="section-header compact"><div><span class="eyebrow">ACTIVITY</span><h2>Recent updates</h2></div><button class="text-button">View history</button></div><ul class="timeline"><li><span class="timeline-icon green">✓</span><div><strong>Payment received</strong><p>₹48,360 credited for Wheat lot W-9812</p><small>Today, 9:42 AM</small></div><b class="amount">+ ₹48,360</b></li><li><span class="timeline-icon orange">◈</span><div><strong>Quality report available</strong><p>Moisture & grade report for your last lot</p><small>Yesterday, 4:15 PM</small></div><button class="view-report">View</button></li><li><span class="timeline-icon blue">⌁</span><div><strong>Slot booked successfully</strong><p>Token #A-042 issued for 12 September</p><small>Yesterday, 10:08 AM</small></div></li></ul></article>
+            <article class="insight-card"><div><span class="eyebrow light">SMART INSIGHT</span><h2>Plan your arrival better</h2><p>Friday mornings are usually 24% less crowded than afternoons at Mandi No. 04.</p><button id="arrivalTips">See arrival tips <span>→</span></button></div><div class="insight-art"><span class="sun">☀</span><span class="hill hill-one"></span><span class="hill hill-two"></span><span class="tractor">♜</span><span class="crop">♧ ♧ ♧</span></div></article>
+          </section>
+          <section class="market-section" id="payments"><div class="section-header"><div><span class="eyebrow">MARKET INTELLIGENCE</span><h2>Sell where your harvest earns more</h2></div><button class="secondary-link" id="refreshMarkets">Refresh rates <span>↻</span></button></div><div class="market-table-wrap"><table><thead><tr><th>Procurement centre</th><th>Today's wheat rate</th><th>Distance</th><th>Net return for 45 qtl</th><th></th></tr></thead><tbody id="marketRows"><tr><td><strong>Jaipur APMC, Bassi</strong><small>Low queue · 28 farmers</small></td><td>₹2,275 / qtl</td><td>12 km</td><td class="net-return">₹101,835</td><td><button class="choose-market">Recommended</button></td></tr></tbody></table></div><p class="market-note">Estimated net return subtracts transport at ₹8/km. Rates are indicative; final procurement rate depends on verified quality grade.</p></section>
+        </div>
+      </main>
+    </div>
+
+    <dialog id="slotDialog"><form method="dialog"><button class="close-dialog" value="cancel" aria-label="Close">×</button><span class="eyebrow">BOOK PROCUREMENT SLOT</span><h2>Choose a time for your crop</h2><p class="dialog-intro">Mandi No. 04 has light traffic on Friday morning.</p><label>Crop <select id="crop"><option>Wheat</option><option>Mustard</option><option>Gram</option></select></label><label>Estimated quantity <input id="quantity" type="number" value="45" min="1" /> quintals</label><div class="slot-options"><button type="button" class="slot selected">9:30 AM<small>12 left</small></button><button type="button" class="slot">10:30 AM<small>8 left</small></button><button type="button" class="slot">11:30 AM<small>5 left</small></button></div><button class="confirm-slot" value="confirm">Confirm selected slot <span>→</span></button></form></dialog>
+    <button class="bot-trigger" id="botTrigger" aria-label="Open Mandi Mitra advisor"><span>✦</span> Mandi Mitra</button>
+    <aside class="market-bot" id="marketBot" aria-label="Mandi Mitra market advisor" hidden>
+      <header><div class="bot-avatar">✦</div><div><strong>Mandi Mitra</strong><small><i></i> Market advisor online</small></div><button id="botClose" aria-label="Close advisor">×</button></header>
+      <div class="bot-messages" id="botMessages"><div class="bot-message">Namaste, Arjun! I can use your location to compare nearby mandis and estimate where your wheat may earn the most after transport.</div></div>
+      <div class="bot-controls"><label>Crop<select id="botCrop"><option>Wheat</option><option>Mustard</option></select></label><label>Quantity (qtl)<input id="botQuantity" type="number" value="45" min="1" /></label><button id="findMandis">⌖ Find nearby mandis</button><p>Your location is used only for this comparison and is not stored.</p></div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
