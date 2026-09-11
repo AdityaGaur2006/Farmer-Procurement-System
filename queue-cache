@@ -1,0 +1,10 @@
+function createQueueCache() {
+  const entries = new Map();
+  return {
+    get(key) { const entry = entries.get(key); if (!entry || entry.expiresAt < Date.now()) { entries.delete(key); return null; } return entry.value; },
+    set(key, value, ttlMs = 10_000) { entries.set(key, { value, expiresAt: Date.now() + ttlMs }); return value; },
+    invalidate(key) { entries.delete(key); }
+  };
+}
+
+module.exports = { createQueueCache };
