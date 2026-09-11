@@ -1,0 +1,162 @@
+{
+  "farmers": [
+    {
+      "id": "FR-24081",
+      "name": "Arjun Meena",
+      "phone": "9876543210",
+      "village": "Bassi, Jaipur",
+      "passwordSalt": "a3ae0d65ffda6ed682580d0870bf22f2",
+      "passwordHash": "4d7ed451f39cdd9262b3626b1b9479cc1bd1b715f48c316948890928139cdc56c39c2e672825d458f102e0c3f29d20cd3b6af78353a089e63e05edebd0200181"
+    }
+  ],
+  "centres": [
+    {
+      "id": "CTR-01",
+      "name": "Jaipur APMC, Bassi",
+      "district": "Jaipur",
+      "distanceKm": 12,
+      "queueCount": 28,
+      "status": "open",
+      "latitude": 26.8387,
+      "longitude": 75.8519,
+      "capacityPerHour": 42
+    },
+    {
+      "id": "CTR-02",
+      "name": "Chomu Procurement Centre",
+      "district": "Jaipur",
+      "distanceKm": 37,
+      "queueCount": 11,
+      "status": "open",
+      "latitude": 27.1663,
+      "longitude": 75.714,
+      "capacityPerHour": 42
+    },
+    {
+      "id": "CTR-03",
+      "name": "Dausa Krishi Mandi",
+      "district": "Dausa",
+      "distanceKm": 46,
+      "queueCount": 19,
+      "status": "open",
+      "latitude": 26.8943,
+      "longitude": 76.3342,
+      "capacityPerHour": 42
+    }
+  ],
+  "marketRates": [
+    {
+      "id": "RATE-001",
+      "centreId": "CTR-01",
+      "crop": "Wheat",
+      "pricePerQuintal": 2275,
+      "qualityPremium": 0,
+      "recordedAt": "2026-09-10T08:30:00.000Z"
+    },
+    {
+      "id": "RATE-002",
+      "centreId": "CTR-02",
+      "crop": "Wheat",
+      "pricePerQuintal": 2320,
+      "qualityPremium": 30,
+      "recordedAt": "2026-09-10T08:35:00.000Z"
+    },
+    {
+      "id": "RATE-003",
+      "centreId": "CTR-03",
+      "crop": "Wheat",
+      "pricePerQuintal": 2295,
+      "qualityPremium": 20,
+      "recordedAt": "2026-09-10T08:25:00.000Z"
+    },
+    {
+      "id": "RATE-004",
+      "centreId": "CTR-01",
+      "crop": "Mustard",
+      "pricePerQuintal": 5890,
+      "qualityPremium": 25,
+      "recordedAt": "2026-09-10T08:30:00.000Z"
+    },
+    {
+      "id": "RATE-005",
+      "centreId": "CTR-02",
+      "crop": "Mustard",
+      "pricePerQuintal": 5950,
+      "qualityPremium": 20,
+      "recordedAt": "2026-09-10T08:35:00.000Z"
+    }
+  ],
+  "farmSupplies": [
+    {
+      "id": "SUP-01",
+      "name": "Certified wheat seed",
+      "category": "Seeds",
+      "unit": "40 kg bag",
+      "price": 1820,
+      "stockStatus": "in_stock"
+    },
+    {
+      "id": "SUP-02",
+      "name": "DAP fertiliser",
+      "category": "Fertiliser",
+      "unit": "50 kg bag",
+      "price": 1350,
+      "stockStatus": "in_stock"
+    },
+    {
+      "id": "SUP-03",
+      "name": "Neem bio-pesticide",
+      "category": "Crop protection",
+      "unit": "1 litre",
+      "price": 485,
+      "stockStatus": "low_stock"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BK-77821",
+      "farmerId": "FR-24081",
+      "centreId": "CTR-01",
+      "crop": "Wheat",
+      "quantityQuintals": 45,
+      "slotAt": "2026-09-12T10:30:00+05:30",
+      "token": "A-042",
+      "status": "confirmed"
+    },
+    {
+      "id": "BK-1789057532041",
+      "farmerId": "FR-24081",
+      "centreId": "CTR-01",
+      "crop": "Wheat",
+      "quantityQuintals": 45,
+      "slotAt": "2026-09-12T10:30:00+05:30",
+      "token": "A-044",
+      "status": "confirmed"
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-9812",
+      "farmerId": "FR-24081",
+      "crop": "Wheat",
+      "amount": 48360,
+      "status": "paid",
+      "paidAt": "2026-09-10T09:42:00+05:30"
+    }
+  ],
+  "procurementLots": [
+    {
+      "id": "LOT-W-9812",
+      "farmerId": "FR-24081",
+      "bookingId": "BK-77821",
+      "crop": "Wheat",
+      "acceptedQuantityQuintals": 22.4,
+      "grade": "A",
+      "moisturePercent": 10.8,
+      "cleanGrainPercent": 98.2,
+      "status": "accepted",
+      "receivedAt": "2026-09-10T09:27:00+05:30"
+    }
+  ],
+  "notifications": []
+}
